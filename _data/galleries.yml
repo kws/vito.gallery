@@ -1,6 +1,6 @@
 - id: vito
   description: This is the first gallery
-  imagefolder: /img/vito
+  imagefolder: img/vito
   images:
     - name: 01.jpg
     - name: 02.jpg
