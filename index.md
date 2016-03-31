@@ -1,5 +1,5 @@
 ---
-title: This is another gallery page.
+title: Art By Vito
 layout: gallery
 galleryid: vito
 ---

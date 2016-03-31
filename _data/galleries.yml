@@ -1,5 +1,5 @@
 - id: vito
-  description: This is the first gallery
+  description: Art By Vito
   imagefolder: img/vito
   images:
     - name: 01.jpg
