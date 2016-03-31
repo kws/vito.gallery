@@ -6,36 +6,32 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
+        <!-- syntax highlighting CSS 
+        <link rel="stylesheet" href="/css/syntax.css">
+        -->
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.16/css/lightgallery.css" /> 
+
+        <script src="https://code.jquery.com/jquery-2.2.2.min.js"   
+          integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.16/js/lightgallery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.16/js/lg-thumbnail.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.16/js/lg-fullscreen.min.js"></script>
+
 
     </head>
     <body>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
 
           {{ content }}
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                <a href="http://christianspecht.de/">My site and blog</a>
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="http://christianspecht.de/imprint/">Impressum / Imprint</a>
-              </p>
-            </div>
-          </div>
-        </div>
+
+      <script>
+      $('#gallery').lightGallery({
+          thumbnail:true
+      }); 
+      </script>
 
     </body>
 </html>
