@@ -3,12 +3,28 @@
   imagefolder: img/vito
   images:
     - id: "01"
+      width: 60
+      height: 75
+      year: 1963
+      signed: true
+      framed: true
+      medium: oil on canvas
     - id: "02"
     - id: "03"
+      title: Cafe Terrace at Night (Vincent Van Gogh)
+      width: 65
+      height: 80
+
     - id: "04"
     - id: "05"
     - id: "06"
     - id: "07"
+      title: Serena
+      width: 85
+      height: 105
+      signed: true
+      framed: true
+      medium: oil on canvas
     - id: "08"
     - id: "09"
     - id: "10"

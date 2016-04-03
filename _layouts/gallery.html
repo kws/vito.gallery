@@ -18,7 +18,20 @@ layout: default
   	<div id="captions"> 
     {% for image in gallery.images %}
 	      <div id="caption{{ image.id }}" >
-		      <p>Painting {{image.id}}</p>
+		      <p>
+		      #{{image.id}}
+		      {% if image.title %}{{ image.title }}{% endif %}
+		      {% if image.medium %}
+		      	{{ image.medium }}
+		      {% endif %}
+		      {% if image.width %}
+		      	{{ image.width }}cm x {{ image.height }}cm
+		      	{% if image.framed %}(inc. frame){% endif %}
+		      {% endif %}
+		      {% if image.year %}
+		        {{ image.year }}
+		      {% endif %}
+		      </p>
 	      </div>
     {% endfor %}
     </div>
