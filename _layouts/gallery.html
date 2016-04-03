@@ -6,13 +6,23 @@ layout: default
 {% for gallery in site.data.galleries %}
   {% if gallery.id == page.galleryid %}
 
+
+
     <div id="gallery">
-
     {% for image in gallery.images %}
-      <a href="{{ gallery.imagefolder }}/{{ image.name }}"><img src="{{ gallery.imagefolder }}/thumb/{{ image.name }}" /></a>
+      <a href="{{ gallery.imagefolder }}/{{ image.id }}.jpg" data-sub-html="#caption{{image.id}}"><img 
+      	src="{{ gallery.imagefolder }}/thumb/{{ image.id }}.jpg"  /></a>
     {% endfor %}
-
     </div>
+
+  	<div id="captions"> 
+    {% for image in gallery.images %}
+	      <div id="caption{{ image.id }}" >
+		      <p>Painting {{image.id}}</p>
+	      </div>
+    {% endfor %}
+    </div>
+
 
   {% endif %}
 {% endfor %}
