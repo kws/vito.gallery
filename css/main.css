@@ -30,3 +30,4 @@ a:visited { color: #a0a; }
 
 #gallery img { height: 200px; margin: 5px;}
 #captions {display: none;}
+.caption span {opacity: 0.5;}
