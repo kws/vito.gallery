@@ -84,7 +84,6 @@ $.getJSON("/api/tags/", function( data ) {
     });
   }
   for (var imageid in tagsByImage) {
-    console.log('#image'+imageid);
     var image = $('#image'+imageid);
     image.attr('data-tags', tagsByImage[imageid].join(' '))
     tagsByImage[imageid].forEach(function(tag) {image.addClass('tag-'+tag)});
@@ -95,7 +94,6 @@ $.getJSON("/api/tags/", function( data ) {
     $('#gallery a').not('.tag-'+tagSearch).remove();
     initGallery();
   }
-  console.log(tagSearch);
 });
 
 </script>
