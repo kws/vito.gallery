@@ -111,6 +111,12 @@
     - id: "84"
     - id: "85"
     - id: "86"
+      name: Lucio Dalla
+      width: 50
+      height: 40
+      framed: true
+      medium: oil on canvas
+      
     - id: "87"
     - id: "88"
     - id: "89"
