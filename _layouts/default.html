@@ -7,9 +7,6 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="/css/main.css">
-        <!-- syntax highlighting CSS 
-        <link rel="stylesheet" href="/css/syntax.css">
-        -->
         <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.16/css/lightgallery.css" /> 
 
         <script src="https://code.jquery.com/jquery-2.2.2.min.js"   
@@ -36,17 +33,6 @@
 
 
           {{ content }}
-
-
-      <script>
-      var gallery = $('#gallery');
-      gallery.lightGallery({
-          thumbnail: true
-      }); 
-      gallery.on('onAfterSlide.lg', function(event, prevIndex, index){
-        _gs('track');
-      });
-      </script>
 
     </body>
 </html>
