@@ -157,7 +157,10 @@ images:
   - id: "125"
   - id: "126"
   - id: "127"
-  - id: "128"
+
+# Don't include the paiting by Max
+#  - id: "128"
+
   - id: "129"
   - id: "130"
   - id: "131"
