@@ -47,6 +47,14 @@
   background-size: cover;
   -o-background-size: cover;
   margin-bottom: 50px;
-  height: 150px;
+  height: 250px;
+  mix-blend-mode: multiply; 
 }
-#intro-header .site-heading { margin-top: 15px; }
+#intro-header .site-heading { margin-top: 150px; }
+#intro-header #signature { 
+	background-image: url('/img/vito.png'); 
+ 	mix-blend-mode: hard-light; 
+	height: 76px; 
+	width:101px;
+}
+
