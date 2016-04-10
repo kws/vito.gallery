@@ -1,5 +1,0 @@
----
-layout: api
-permalink: /api/tags/
----
-{{site.data.tags | jsonify }}
