@@ -3,7 +3,7 @@ var gallery = JSON.parse(document.getElementById('gallery-data').textContent)
 var tags = JSON.parse(document.getElementById('tags-data').textContent)
 
 // Create image lookup and group into rows & columns
-var imageById = {};
+gallery.imageById = imageById = {};
 gallery.images.forEach(function(image) {
 	image._filename = image.id;
 	image.id = parseInt(image.id);
@@ -26,8 +26,7 @@ for (var tag in tags) {
 }
 
 // Set header
-var headerImages = gallery.images.filter(function(image){return $.inArray('header', image.tags) >= 0;});
-var headerImage = headerImages[Math.round(Math.random()*headerImages.length)];
+var headerImage = getRandomImageWithTag(gallery.images, 'header');
 var headerUrl = gallery.imagefolder + "/" + headerImage._filename + ".jpg";
 document.getElementById("intro-header").style.backgroundImage = "url('" + headerUrl + "')";
 
@@ -39,39 +38,56 @@ if (tagSearch) {
   });
 }
 
-// Arrange into rows & columns
-gallery.rows = imagesByRow = [], currentCol = [];
-gallery.images.forEach(function(image) {
-	if (currentCol.length >= 4) currentCol = [];
-	if (currentCol.length === 0) imagesByRow.push(currentCol);
-	currentCol.push(image);
-});
-
-
+// Arrange into rows & columns and then render
+makeRows(gallery, 4);
 var source   = document.getElementById("gallery-template").textContent;
 var template = Handlebars.compile(source);
 
 document.getElementById('content').innerHTML = template(gallery);
 
-var gallery = $('#content');
-gallery.lightGallery({
+var lightGallery = $('#content');
+lightGallery.lightGallery({
   selector: '.portfolio-item a',
   thumbnail: true
 }); 
-gallery.on('onAfterSlide.lg', function(event, prevIndex, index){
+lightGallery.on('onAfterSlide.lg', function(event, prevIndex, index){
   _gs('track');
 });   
 
-
-
-
-function getQueryVariable(variable)
-{
-       var query = window.location.search.substring(1);
-       var vars = query.split("&");
-       for (var i=0;i<vars.length;i++) {
-               var pair = vars[i].split("=");
-               if(pair[0] == variable){return pair[1];}
-       }
-       return(false);
+/**
+  Populates the gallery.rows property with the images broken down
+  by rows and columns (rows is an array of arrays). maxCols is the max
+  number of rows per column.
+*/
+function makeRows(gallery, maxCols) {
+  gallery.rows = imagesByRow = [], currentCol = [];
+  gallery.images.forEach(function(image) {
+    if (currentCol.length >= maxCols) currentCol = [];
+    if (currentCol.length === 0) imagesByRow.push(currentCol);
+    currentCol.push(image);
+  });
 }
+
+/**
+  Pick a random image from the array of images with tag 'tag'.
+
+  Leave tag undefined to pick from all.
+*/
+function getRandomImageWithTag(images, tag){
+  var images = typeof tag === 'undefined' ? images : 
+    images.filter(function(image){return $.inArray(tag, image.tags) >= 0;});
+  var randomPos = Math.floor(Math.random() * images.length);
+  return images[randomPos];
+}
+
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+         var pair = vars[i].split("=");
+         if(pair[0] == variable){return pair[1];}
+  }
+  return(false);
+}
+
+
