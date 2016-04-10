@@ -37,3 +37,16 @@
 .portfolio-item img {
 	display: inline-block;
 }
+
+#intro-header {
+  background-color: #808080;
+  background: no-repeat center center;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  margin-bottom: 50px;
+  height: 150px;
+}
+#intro-header .site-heading { margin-top: 15px; }

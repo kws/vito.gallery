@@ -3,6 +3,18 @@ title: Art By Vito
 layout: default
 ---
 
+<header id="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <img src="/img/vito.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
 <div id="content">
     <div class="loading">
         <i class="fa fa-refresh fa-spin"></i>
@@ -26,18 +38,9 @@ layout: default
 
 {% raw %}
 <script id="gallery-template" type="text/x-handlebars-template">
+
     <!-- Page Content -->
     <div class="container">
-
-        <!-- Page Heading -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">{{description}}
-                    <small>{{subtitle}}</small>
-                </h1>
-            </div>
-        </div>
-        <!-- /.row -->
 
         <!-- Projects Row -->
         {{#each rows}}

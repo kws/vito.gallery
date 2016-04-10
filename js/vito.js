@@ -25,7 +25,13 @@ for (var tag in tags) {
   });
 }
 
-// Filter by tag 
+// Set header
+var headerImages = gallery.images.filter(function(image){return $.inArray('header', image.tags) >= 0;});
+var headerImage = headerImages[Math.round(Math.random()*headerImages.length)];
+var headerUrl = gallery.imagefolder + "/" + headerImage._filename + ".jpg";
+document.getElementById("intro-header").style.backgroundImage = "url('" + headerUrl + "')"
+
+// Filter by tag
 var tagSearch = getQueryVariable('tag'); 
 if (tagSearch) {
   gallery.images = gallery.images.filter(function(image){
