@@ -41,7 +41,6 @@ layout: default
 
     <!-- Page Content -->
     <div class="container">
-
         <!-- Projects Row -->
         {{#each rows}}
         <div class="row">
@@ -64,6 +63,13 @@ layout: default
                                 {{ year }}
                             </span>
                         </div>
+                        {{#if ../../showLabels}}
+                        <div class="labels">
+                            {{#each tags}}
+                              <span class="label label-pill label-info">{{.}}</span>
+                            {{/each}}
+                        </div>  
+                        {{/if}}
                     </div>  
                 </div>
             </div>

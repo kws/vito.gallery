@@ -38,6 +38,9 @@ if (tagSearch) {
   });
 }
 
+// Option to show labels
+gallery.showLabels = typeof getQueryVariable('labels') != 'undefined';
+
 // Arrange into rows & columns and then render
 makeRows(gallery, 4);
 var source   = document.getElementById("gallery-template").textContent;
