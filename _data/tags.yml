@@ -1,7 +1,7 @@
 in-ostia: [4, 6, 11, 12, 13, 18, 27, 28, 34, 41, 86]
 td: [3, 17, 35, 70, 85, 92, 103, 132, 155, 161]
 mk: [125]
-cm-hanging: [42, 48]
+cm-hanging: [42, 48, 166, 167, 168]
 cm-proposed: [16, 99, 21, 142, 136]
 
 #Special tag used to find cadidates for the header
