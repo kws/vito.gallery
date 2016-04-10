@@ -2,4 +2,4 @@
 layout: api
 permalink: /api/paintings/
 ---
-{{site.data.galleries | jsonify }}
+{{site.data.paintings | jsonify }}

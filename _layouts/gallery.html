@@ -2,46 +2,39 @@
 layout: default
 ---
 
+{% assign gallery = site.data.paintings %}
+  <div id="gallery">
+  {% for image in gallery.images %}
+    <a id="image{{ image.id | plus:0 }}" href="{{ gallery.imagefolder }}/{{ image.id }}.jpg" 
+      data-sub-html="#caption{{image.id | plus:0 }}"><img 
+      src="{{ gallery.imagefolder }}/thumb/{{ image.id }}.jpg"  /></a>
+  {% endfor %}
+  </div>
 
-{% for gallery in site.data.galleries %}
-  {% if gallery.id == page.galleryid %}
-
-
-
-    <div id="gallery">
-    {% for image in gallery.images %}
-      <a id="image{{ image.id | plus:0 }}" href="{{ gallery.imagefolder }}/{{ image.id }}.jpg" 
-        data-sub-html="#caption{{image.id | plus:0 }}"><img 
-        src="{{ gallery.imagefolder }}/thumb/{{ image.id }}.jpg"  /></a>
-    {% endfor %}
-    </div>
-
-    <div id="captions"> 
-    {% for image in gallery.images %}
-          <div id="caption{{ image.id | plus:0 }}" >
-              <p class="caption">
-              #{{image.id}}
-              {% if image.title %}{{ image.title }}{% endif %}
-              <span>
-              {% if image.medium %}
-                {{ image.medium }}
-              {% endif %}
-              {% if image.width %}
-                {{ image.width }}cm x {{ image.height }}cm
-                {% if image.framed %}(inc. frame){% endif %}
-              {% endif %}
-              {% if image.year %}
-                {{ image.year }}
-              {% endif %}
-              <span>
-              </p>
-          </div>
-    {% endfor %}
-    </div>
+  <div id="captions"> 
+  {% for image in gallery.images %}
+        <div id="caption{{ image.id | plus:0 }}" >
+            <p class="caption">
+            #{{image.id}}
+            {% if image.title %}{{ image.title }}{% endif %}
+            <span>
+            {% if image.medium %}
+              {{ image.medium }}
+            {% endif %}
+            {% if image.width %}
+              {{ image.width }}cm x {{ image.height }}cm
+              {% if image.framed %}(inc. frame){% endif %}
+            {% endif %}
+            {% if image.year %}
+              {{ image.year }}
+            {% endif %}
+            <span>
+            </p>
+        </div>
+  {% endfor %}
+  </div>
 
 
-  {% endif %}
-{% endfor %}
 
 <script>
 var gallery;
