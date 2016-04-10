@@ -4,30 +4,42 @@
 /*
 /*****************************************************************************/
 
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html, body { height: 100%; }
-
-body {
-  background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
-  font-size: small;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
-
-h1 { margin-bottom: 1em; }
-p { margin: 1em 0; }
-
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
 
 #gallery img { height: 200px; margin: 5px;}
 #captions {display: none;}
-.caption span {opacity: 0.5;}
+.caption {font-size:12px;}
+.caption span {opacity: 0.5; }
+.caption-container {text-align: center;}
+.caption-container .caption span {visibility: hidden;display: block;width:0;height:0;}
+
+.loading { text-align: center }
+.loading i { font-size:5em; }
+
+.portfolio-item .item {
+	
+	margin: 3px;
+	padding: 3px;
+	height: 250px;
+	min-width: 200px;
+}
+
+.portfolio-item .description {
+	text-align: center;
+}
+
+
+
+.portfolio-item a {
+	display: block;
+	width:200px;
+	height:200px;
+	margin: auto;
+}
+
+.portfolio-item img {
+	display: block;
+	margin: auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}

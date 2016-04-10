@@ -1,0 +1,74 @@
+---
+title: Art By Vito
+layout: default
+---
+
+<div id="content">
+    <div class="loading">
+        <i class="fa fa-refresh fa-spin"></i>
+        <div>Loading Gallery</div>
+    </div>
+</div>
+
+
+
+<script type="application/json" id="gallery-data">
+{{site.data.paintings | jsonify }}
+</script>
+
+<script type="application/json" id="tags-data">
+{{site.data.tags | jsonify }}
+</script>
+
+<script type="application/json" id="tags-data">
+{{site.data.tags | jsonify }}
+</script>
+
+{% raw %}
+<script id="gallery-template" type="text/x-handlebars-template">
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">{{description}}
+                    <small>{{subtitle}}</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        {{#each rows}}
+        <div class="row">
+            {{#each .}}
+            <div class="col-md-3 col-sm-6 portfolio-item">
+                <div class="item">
+                    <a id="image{{id}}" href="{{../../imagefolder}}/{{_filename}}.jpg" data-sub-html="#caption{{id}}">
+                        <img class="img-responsive" src="{{../../imagefolder}}/thumb/{{_filename}}.jpg" alt="">
+                    </a>
+                    <div class="caption-container" id="caption{{id}}">
+                        <div class="caption" >
+                            #{{ id }}
+                            {{ title }}
+                            <span>
+                                {{ medium }}
+                                {{#if width }}{{ width }}cm x {{ height }}cm{{/if}}
+                                {{ year }}
+                            </span>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/each}}
+
+</script>
+{% endraw %}
+
+<script type="text/javascript" src="/js/vito.js"></script>
+
+
+

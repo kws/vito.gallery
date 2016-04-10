@@ -1,5 +1,0 @@
----
-layout: api
-permalink: /api/paintings/
----
-{{site.data.paintings | jsonify }}

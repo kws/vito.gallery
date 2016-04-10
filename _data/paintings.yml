@@ -1,5 +1,5 @@
 description: Art By Vito
-imagefolder: img/vito
+imagefolder: /img/vito
 images:
   - id: "01"
     width: 60
