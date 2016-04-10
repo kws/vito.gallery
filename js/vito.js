@@ -39,7 +39,7 @@ if (tagSearch) {
 }
 
 // Option to show labels
-gallery.showLabels = typeof getQueryVariable('labels') != 'undefined';
+gallery.showLabels = getQueryVariable('labels');
 
 // Arrange into rows & columns and then render
 makeRows(gallery, 4);
