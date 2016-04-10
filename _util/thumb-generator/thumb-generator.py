@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 import os, sys
 from optparse import OptionParser
-from PIL import Image
+from PIL import Image, ImageFilter
 
 def gen_thumbnail(filename, options):
     image = Image.open("%s/%s" %(options.DIR_SRC, filename));
     image.thumbnail((options.DIM, options.DIM), Image.ANTIALIAS)
+    image = image.filter(ImageFilter.SHARPEN)
     image.save("%s/%s" % (options.DIR_THMB, filename))
 
 def list_files(src_dir, ext):
