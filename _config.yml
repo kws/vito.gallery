@@ -1,1 +1,3 @@
 name: Vito Gallery
+exclude:
+  - "_util"
