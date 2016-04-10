@@ -10,15 +10,39 @@ images:
     medium: oil on canvas
 
   - id: "02"
+    title: Anna
+    width: 50
+    height: 60
+    signed: true
+    year: 1992
+    medium: oil on canvas
 
   - id: "03"
     title: Cafe Terrace at Night (Vincent Van Gogh)
     width: 65
     height: 80
+    medium: oil on canvas
 
   - id: "04"
+    title: Piazza Navona
+    width: 95
+    height: 85
+    framed: true
+    signed: true
+    medium: oil on canvas
+
   - id: "05"
+    width: 100
+    height: 80
+    medium: oil on canvas
+
   - id: "06"
+    width: 100
+    height: 70
+    medium: oil on canvas
+    framed: true
+    signed: true
+    year: 1998
 
   - id: "07"
     title: Serena

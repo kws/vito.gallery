@@ -57,7 +57,10 @@ layout: default
                             {{ title }}
                             <span>
                                 {{ medium }}
-                                {{#if width }}{{ width }}cm x {{ height }}cm{{/if}}
+                                {{#if width }}
+                                    {{ width }}cm x {{ height }}cm
+                                    {{#if framed}} (inc. frame){{/if}}
+                                {{/if}}
                                 {{ year }}
                             </span>
                         </div>
