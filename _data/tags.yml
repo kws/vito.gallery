@@ -5,7 +5,7 @@ td-requested: [3, 92] # Forgot to give #3, can't find #92
 
 mk: [125]
 cm-hanging: [42, 48, 166, 167, 168]
-cm-proposed: [16, 99, 21, 142, 136]
+cm-proposed: [16, 99, 21, 142, 136, 131]
 
 # Packed Boxes
 box1: [22, 53, 54, 29, 72, 69, 68,74, 65, 66, 73, 114, 91]
