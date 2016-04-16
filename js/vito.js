@@ -33,8 +33,8 @@ console.log("Loading header")
 $('<img/>').attr('src', headerUrl).load(function() {
    console.log("header loaded...")
    $(this).remove(); 
-   $('#intro-header .container').css('background-image', 'url(' + headerUrl + ')').fadeIn();
-   renderGallery();
+   $('#intro-header .container').css('background-image', 'url(' + headerUrl + ')')
+    .fadeIn(500, renderGallery);
 });
 
 
@@ -55,16 +55,19 @@ function renderGallery() {
   var source   = document.getElementById("gallery-template").textContent;
   var template = Handlebars.compile(source);
 
-  document.getElementById('content').innerHTML = template(gallery);
-
   var lightGallery = $('#content');
-  lightGallery.lightGallery({
-    selector: '.portfolio-item a',
-    thumbnail: true
-  }); 
-  lightGallery.on('onAfterSlide.lg', function(event, prevIndex, index){
-    _gs('track');
-  });   
+  lightGallery.fadeOut(200, function(){
+    lightGallery.html(template(gallery));
+    lightGallery.lightGallery({
+      selector: '.portfolio-item a',
+      thumbnail: true
+    }); 
+    lightGallery.on('onAfterSlide.lg', function(event, prevIndex, index){
+      _gs('track');
+    });
+    lightGallery.fadeIn();
+  })
+
 }
 
 /**
