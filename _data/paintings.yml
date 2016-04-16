@@ -177,8 +177,8 @@ images:
   - id: "111"
   - id: "112"
 
-# 113 and 116 are duplicates. The painting is numbered 116
-#  - id: "113"
+  - id: "113" # Used to be duplicate for 116 - reused id
+    medium: oil on board
 
   - id: "114"
   - id: "115"
@@ -280,3 +280,12 @@ images:
   - id: "166"
   - id: "167" 
   - id: "168"
+  - id: 169
+    medium: oil on board
+
+  - id: 170
+    medium: oil on board
+  - id: 171
+    medium: oil on board
+
+
