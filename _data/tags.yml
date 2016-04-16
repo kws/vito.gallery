@@ -1,4 +1,4 @@
-missing: [49, 92, 137, 138, 148, 165] 
+missing: [49, 92, 137, 138, 145, 165] 
 possible-double: [136]
 
 # Hanging
@@ -18,11 +18,12 @@ box5: [2, 32, 39, 40, 46, 47, 50, 51, 52, 55, 56, 57, 58]
 box6: [24, 78, 79, 93, 102, 107, 121, 122, 123, 124, 126, 130, 135, 136, 139, 151, 152, 153, 154, 156, 157]
 
 # Boards are wrapped in brown paper and stacked with the unboxed paintings
+# brds4 has been unpacked and confirmed
 brds1: [113, 169, 170, 171]
 brds2: [59, 60, 61]
 brds3: [156, 158, 159, 162, 164]
-brds4: [33, 129, 149, 150, 160, 163]
-brds5: [36, 133, 134, 141, 143, 144, 145, 146, 147]
+brds4: [33, 129, 149, 150, 160, 163] 
+brds5: [36, 133, 134, 141, 143, 144, 146, 147, 148]
 
 # Unboxed paintings are stacked at the back
 stacked: [1,5,7,14,19,20,23,25,26,30,31,38,45,62,67,71,77,127,173]
