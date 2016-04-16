@@ -37,19 +37,22 @@ $('<img/>').attr('src', headerUrl).load(function() {
 });
 
 // Attach document scroll listener
+var header = $('#intro-header .container');
 window.addEventListener("scroll", function(event){
-  var header = $('#intro-header .container');
-  console.log(document.body.scrollTop);
-  if (document.body.scrollTop > 137) {
-    console.log('Fixing position')
-    header.css("position", "fixed").css("top","-137px");
-  } else {
-    header.css("position", "relative").css('top',0);
+  if (document.body.scrollTop > 137 && !header.stuck) {
+    header.addClass('stuck')
+    header.stuck = true;
+  } else if (document.body.scrollTop <= 137 && header.stuck) {
+    header.removeClass('stuck')
+    header.stuck = false;
   }
 
 });
 
 function renderGallery() {
+  // iOS fix
+  $('#intro-header .container').css('transform','translateZ(0)');
+
   // Filter by tag 
   var tagSearch = getQueryVariable('tag'); 
   if (tagSearch) {
