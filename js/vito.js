@@ -28,34 +28,44 @@ for (var tag in tags) {
 // Set header
 var headerImage = getRandomImageWithTag(gallery.images, 'header');
 var headerUrl = gallery.imagefolder + "/" + headerImage._filename + ".jpg";
-document.getElementById("intro-header").style.backgroundImage = "url('" + headerUrl + "')";
 
-// Filter by tag 
-var tagSearch = getQueryVariable('tag'); 
-if (tagSearch) {
-  gallery.images = gallery.images.filter(function(image){
-  	return $.inArray(tagSearch, image.tags) >= 0;
-  });
+console.log("Loading header")
+$('<img/>').attr('src', headerUrl).load(function() {
+   console.log("header loaded...")
+   $(this).remove(); 
+   $('#intro-header .container').css('background-image', 'url(' + headerUrl + ')').fadeIn();
+   renderGallery();
+});
+
+
+function renderGallery() {
+  // Filter by tag 
+  var tagSearch = getQueryVariable('tag'); 
+  if (tagSearch) {
+    gallery.images = gallery.images.filter(function(image){
+    	return $.inArray(tagSearch, image.tags) >= 0;
+    });
+  }
+
+  // Option to show labels
+  gallery.showLabels = getQueryVariable('labels');
+
+  // Arrange into rows & columns and then render
+  makeRows(gallery, 4);
+  var source   = document.getElementById("gallery-template").textContent;
+  var template = Handlebars.compile(source);
+
+  document.getElementById('content').innerHTML = template(gallery);
+
+  var lightGallery = $('#content');
+  lightGallery.lightGallery({
+    selector: '.portfolio-item a',
+    thumbnail: true
+  }); 
+  lightGallery.on('onAfterSlide.lg', function(event, prevIndex, index){
+    _gs('track');
+  });   
 }
-
-// Option to show labels
-gallery.showLabels = getQueryVariable('labels');
-
-// Arrange into rows & columns and then render
-makeRows(gallery, 4);
-var source   = document.getElementById("gallery-template").textContent;
-var template = Handlebars.compile(source);
-
-document.getElementById('content').innerHTML = template(gallery);
-
-var lightGallery = $('#content');
-lightGallery.lightGallery({
-  selector: '.portfolio-item a',
-  thumbnail: true
-}); 
-lightGallery.on('onAfterSlide.lg', function(event, prevIndex, index){
-  _gs('track');
-});   
 
 /**
   Populates the gallery.rows property with the images broken down
