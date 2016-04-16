@@ -12,7 +12,7 @@
 .caption-container {text-align: center;}
 .caption-container .caption span {visibility: hidden;display: block;width:0;height:0;}
 
-#content { margin-top: 50px; }
+#content { margin-top: 50px; position: relative; z-index: 10 }
 .loading { text-align: center }
 .loading i { font-size:5em; }
 
@@ -39,7 +39,7 @@
 	display: inline-block;
 }
 
-#intro-header {height: 250px;}
+#intro-header {height: 250px;; mix-blend-mode: normal;}
 #intro-header .container {
   background-color: #808080;
   background: no-repeat center center;
@@ -50,9 +50,10 @@
   -o-background-size: cover;
   margin-bottom: 50px;
   height: 250px;
-  mix-blend-mode: multiply; 
   display: none;
   width:100%;
+  z-index: 20;
+  box-shadow: 0 5px 10px #fff;
 }
 #intro-header .site-heading { margin-top: 150px; }
 #intro-header #signature { 

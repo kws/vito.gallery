@@ -29,14 +29,25 @@ for (var tag in tags) {
 var headerImage = getRandomImageWithTag(gallery.images, 'header');
 var headerUrl = gallery.imagefolder + "/" + headerImage._filename + ".jpg";
 
-console.log("Loading header")
+// Load header image
 $('<img/>').attr('src', headerUrl).load(function() {
-   console.log("header loaded...")
    $(this).remove(); 
    $('#intro-header .container').css('background-image', 'url(' + headerUrl + ')')
     .fadeIn(500, renderGallery);
 });
 
+// Attach document scroll listener
+window.addEventListener("scroll", function(event){
+  var header = $('#intro-header .container');
+  console.log(document.body.scrollTop);
+  if (document.body.scrollTop > 137) {
+    console.log('Fixing position')
+    header.css("position", "fixed").css("top","-137px");
+  } else {
+    header.css("position", "relative").css('top',0);
+  }
+
+});
 
 function renderGallery() {
   // Filter by tag 
