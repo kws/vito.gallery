@@ -100,6 +100,9 @@ images:
   - id: "47"
   - id: "48"
   - id: "49"
+    width: 70
+    height: 50
+    medium: oil on canvas
 
   - id: "50"
   - id: "51"
@@ -154,6 +157,10 @@ images:
   - id: "90"
   - id: "91"
   - id: "92"
+    width: 42
+    height: 50
+    medium: oil on canvas
+
   - id: "93"
   - id: "94"
   - id: "95"
@@ -209,9 +216,20 @@ images:
   - id: "135"
   - id: "136"
   - id: "137"
-  - id: "138"
-  - id: "139"
+    width: 37
+    height: 41
+    medium: oil on board
 
+  - id: "138"
+    width: 37
+    height: 41
+    medium: oil on board
+
+  - id: "139"
+    width: 41
+    height: 32
+    medium: oil on board
+  
   - id: "140"
     title: By "Vitino"
 
