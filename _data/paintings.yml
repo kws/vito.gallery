@@ -65,14 +65,17 @@ images:
     width: 50
     height: 60
     signed: true
+    year: 1993
     medium: oil on canvas
 
   - id: "16"
   
   - id: "17"
+    title: Piazza Navona
     height: 60
     width: 70
     signed: true
+    year: 1998
     medium: oil on canvas
 
   - id: "18"
@@ -288,6 +291,8 @@ images:
   - id: "89"
     height: 35
     width: 50
+    signed: true
+    year: 1998
     medium: oil on canvas
 
   - id: "90"
