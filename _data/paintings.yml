@@ -59,16 +59,34 @@ images:
   - id: "12"
   - id: "13"
   - id: "14"
+
   - id: "15"
+    title: Sunflowers
+    width: 50
+    height: 60
+    signed: true
+    medium: oil on canvas
+
   - id: "16"
+  
   - id: "17"
+    height: 60
+    width: 70
+    signed: true
+    medium: oil on canvas
+
   - id: "18"
   - id: "19"
   - id: "20"
   - id: "21"
   - id: "22"
   - id: "23"
+
   - id: "24"
+    height: 25
+    width: 35
+    medium: oil on canvas
+
   - id: "25"
   - id: "26"
   - id: "27"
@@ -84,51 +102,159 @@ images:
     medium: oil on board
 
   - id: "34"
+  
   - id: "35"
+    height: 60
+    width: 100
+    medium: oil on canvas
+
   - id: "36"
   - id: "37"
   - id: "38"
   - id: "39"
 
   - id: "40"
+    height: 70
+    width: 50
+    medium: oil on canvas
+
   - id: "41"
+    height: 60
+    width: 50
+    medium: oil on canvas
+
   - id: "42"
   - id: "43"
+
   - id: "44"
+    height: 40
+    width: 60
+    medium: oil on canvas
+
   - id: "45"
   - id: "46"
+
   - id: "47"
+    height: 50
+    width: 70
+    medium: oil on canvas
+
   - id: "48"
+    signed: true
+    framed: true
+    medium: oil on canvas
+
   - id: "49"
     width: 70
     height: 50
     medium: oil on canvas
 
   - id: "50"
+    height: 50
+    width: 70
+    medium: oil on canvas
+
   - id: "51"
+    height: 50
+    width: 70
+    signed: true
+    medium: oil on canvas
+
   - id: "52"
+    height: 50
+    width: 70
+    medium: oil on canvas
+
   - id: "53"
+    height: 50
+    width: 70
+    medium: oil on canvas
+
   - id: "54"
+    height: 50
+    width: 70
+    medium: oil on canvas
+
   - id: "55"
+    height: 50
+    width: 70
+    signed: true
+    year: 1999
+    medium: oil on canvas
+
   - id: "56"
+    height: 50
+    width: 70
+    signed: true
+    year: 1994 (?)
+    medium: oil on canvas
+
   - id: "57"
+    height: 50
+    width: 70
+    signed: true
+    year: 1980
+    medium: oil on canvas
+
   - id: "58"
+    height: 50
+    width: 70
+    medium: oil on canvas
+
   - id: "59"
+    height: 40
+    width: 65
+    medium: oil on canvas
 
   - id: "60"
+    height: 68
+    width: 40
+    medium: oil on canvas
+
   - id: "61"
+    height: 80
+    width: 60
+    signed: true
+    year: 1992
+    medium: oil on canvas
+
   - id: "62"
   - id: "63"
   - id: "64"
+    signed: true
+    year: 1999
+
   - id: "65"
+    height: 50
+    width: 60
+    signed: true
+    year: 1997
+    medium: oil on canvas
+
   - id: "66"
   - id: "67"
   - id: "68"
+
   - id: "69"
+    height: 40
+    width: 70
+    medium: oil on canvas
 
   - id: "70"
+    height: 50
+    width: 70
+    medium: oil on canvas
+
   - id: "71"
+    height: 35
+    width: 70
+    medium: oil on canvas
+
   - id: "72"
+    height: 50
+    width: 70
+    medium: oil on canvas
+
   - id: "73"
   - id: "74"
   - id: "75"
@@ -139,10 +265,16 @@ images:
 
   - id: "80"
   - id: "81"
+
   - id: "82"
+    height: 50
+    width: 40
+    medium: oil on canvas
+
   - id: "83"
   - id: "84"
   - id: "85"
+
   - id: "86"
     name: Lucio Dalla
     width: 50
@@ -152,10 +284,15 @@ images:
     
   - id: "87"
   - id: "88"
+
   - id: "89"
+    height: 35
+    width: 50
+    medium: oil on canvas
 
   - id: "90"
   - id: "91"
+
   - id: "92"
     width: 42
     height: 50
@@ -166,29 +303,58 @@ images:
   - id: "95"
   - id: "96"
   - id: "97"
+
   - id: "98"
+    height: 50
+    width: 40
+    medium: oil on canvas
+
   - id: "99"
 
   - id: "100"
+
   - id: "101"
+    height: 45
+    width: 35
+    signed: true
+    medium: oil on canvas
+
   - id: "102"
   - id: "103"
   - id: "104"
   - id: "105"
   - id: "106"
   - id: "107"
+
   - id: "108"
+    height: 40
+    width: 50
+    medium: oil on canvas
+
   - id: "109"
 
   - id: "110"
+
   - id: "111"
+    height: 50
+    width: 40
+    medium: oil on canvas
+
   - id: "112"
+    height: 40
+    width: 50
+    medium: oil on canvas
 
   - id: "113" # Used to be duplicate for 116 - reused id
     medium: oil on board
 
   - id: "114"
+
   - id: "115"
+    height: 50
+    width: 60
+    medium: oil on canvas
+
   - id: "116"
   - id: "117"
   - id: "118"
@@ -198,7 +364,13 @@ images:
   - id: "121"
   - id: "122"
   - id: "123"
+
   - id: "124"
+    title: Via Ovidio
+    height: 30
+    width: 40
+    medium: oil on canvas
+
   - id: "125"
   - id: "126"
   - id: "127"
@@ -207,6 +379,9 @@ images:
 #  - id: "128"
 
   - id: "129"
+    height: 30
+    width: 55
+    medium: oil on canvas
 
   - id: "130"
   - id: "131"
@@ -240,14 +415,36 @@ images:
   - id: "145"
   - id: "146"
   - id: "147"
+
   - id: "148"
+    height: 50
+    width: 40
+    medium: oil on canvas
+
   - id: "149"
   - id: "150"
   - id: "151"
+
   - id: "152"
+    height: 18
+    width: 23
+    medium: oil on canvas
+
   - id: "153"
+    height: 18
+    width: 23
+    medium: oil on canvas
+
   - id: "154"
+    height: 18
+    width: 23
+    medium: oil on canvas
+
   - id: "155"
+    height: 20
+    width: 25
+    medium: oil on canvas
+
   - id: "156"
   - id: "157"
 
@@ -298,14 +495,21 @@ images:
   - id: "166"
   - id: "167" 
   - id: "168"
-  - id: 169
-    medium: oil on board
 
-  - id: 170
+  - id: "169"
     medium: oil on board
-  - id: 171
+    comment: no scale on photo
+
+  - id: "170"
     medium: oil on board
-  - id: 172
+    comment: no scale on photo
+
+  - id: "171"
     medium: oil on board
+    comment: no scale on photo
+
+  - id: "172"
+    medium: oil on board
+    comment: no scale on photo
 
 
